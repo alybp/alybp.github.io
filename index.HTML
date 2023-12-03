@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>W3.CSS Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1 {
+                font-family: "Raleway", sans-serif
+            }
+
+            body,
+            html {
+                height: 100%
+            }
+
+            .bgimg {
+                background-image: url(neon.jpeg);
+                min-height: 100%;
+                background-position: center;
+                background-size: cover;
+            }
+            * , *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+p {
+  text-align: right;
+  font-size: 60px;
+  margin-top: 0px;
+}
+  </style>
+    </head>
+<body>
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+        <div class="w3-display-topleft w3-padding-large w3-xlarge">
+            Stand Up Show by Dolaveh Greenstein - The Local Netanya Bar
+        </div>
+        <div class="w3-display-middle">
+            <h1 class="w3-jumbo w3-animate-top">AVISHAI LAZAR, <br/> COME TO MY SHOW</h1>
+            <hr class="w3-border-grey" style="margin:auto;width:40%">
+            <p class="w3-large w3-center"></p>
+        </div>
+        <div class="w3-display-bottomleft w3-padding-large">
+        </div>
+        <p id="demo"></p>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 21, 2023 15:37:25").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+    </div>
+</body>
+</html>
